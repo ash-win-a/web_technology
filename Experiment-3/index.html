@@ -1,0 +1,277 @@
+<!-- URK24CS1144 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #eee;
+    }
+
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        background: white;
+        border: 2px solid #999;
+    }
+
+    /* Header */
+
+    header {
+        background: linear-gradient(to right, #8e2de2, #b245ff);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .profile {
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    header h1 {
+        flex: 1;
+        text-align: center;
+    }
+
+    .social img {
+        width: 25px;
+        margin-left: 5px;
+    }
+
+    /* Navigation */
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        background: #d7f5f5;
+        padding: 10px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* About */
+
+    .about {
+        display: flex;
+        background: #76bdc0bb;
+    }
+
+    .text {
+        width: 40%;
+        padding: 30px;
+        line-height: 28px;
+    }
+
+    .banner {
+        width: 60%;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Technology */
+
+    .technology {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        height: 300px;
+    }
+
+    .card {
+        width: 22%;
+        background: #24395b;
+        color: white;
+        text-align: center;
+        padding: 10px;
+
+    }
+
+    .card img {
+        width: 100%;
+        height: 150px;
+    }
+
+    /* Family */
+
+    .family {
+        display: flex;
+        justify-content: space-around;
+        background: url("background.jpg");
+        background-size: cover;
+        padding: 30px 10px;
+    }
+
+    .member {
+        width: 30%;
+        text-align: center;
+        color: white;
+    }
+
+    .member img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 5px solid black;
+    }
+
+    .member h3 {
+        color: #99ff66;
+        margin: 15px 0;
+    }
+
+    footer {
+        background: #e47777;
+        padding: 15px;
+        font-style: italic;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <img src="profile.webp" class="profile">
+
+            <h1>Mr.A ASHWIN </h1>
+
+            <div class="social">
+                <img src="decyoutube.webp">
+                <img src="twitter logo.avif">
+                <img src="insta logo.jpg">
+            </div>
+        </header>
+
+        <nav>
+            <a href="#">Personal</a>
+            <a href="#">Academic</a>
+            <a href="#">Activity</a>
+            <a href="#">Others</a>
+        </nav>
+
+        <section class="about">
+
+            <div class="text">
+
+                <h3>
+                    <p>
+                        Hello! I am a student with a keen interest in learning new technologies and improving my
+                        programming
+                        skills. I enjoy working on web development projects using HTML, CSS, and JavaScript. I am
+                        hardworking, self-motivated, and always eager to learn new concepts. My goal is to become a
+                        skilled
+                        software engineer and contribute to innovative technology solutions.
+                    </p>
+                </h3>
+
+            </div>
+
+            <div class="banner">
+
+                <img src="bg image.jpg">
+
+            </div>
+
+        </section>
+
+        <section class="technology">
+
+            <div class="card">
+                <img src="html logo.webp" style="height: 200px;">
+                <h3>HTML5</h3>
+            </div>
+
+            <div class="card">
+                <img src="css logo.jpg" style="height: 200px;">
+                <h3>CSS3</h3>
+            </div>
+
+            <div class="card">
+                <img src="java script logo.jpg" style="height: 200px;">
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="card">
+                <img src="php logo.jpg" style="height: 200px;">
+                <h3>PHP</h3>
+            </div>
+
+        </section>
+
+        <section class="family" style="background-color: gray;">
+
+            <div class="member">
+
+                <img src="father logo.jpg">
+
+                <h3>Mr. Father's Name</h3>
+
+                <p>
+                    It was my father who taught me to value myself.
+                </p>
+
+            </div>
+
+            <div class="member">
+
+                <img src="nother logo.webp">
+
+                <h3>Mrs. Mother's Name</h3>
+
+                <p>
+                    My mother taught me that we all have the power to achieve dreams.
+                </p>
+
+            </div>
+
+            <div class="member">
+
+                <img src="bro logo.png!bw700">
+
+                <h3>Sis / Bro Name</h3>
+
+                <p>
+                    A sister is both your mirror and your opposite.
+                </p>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <p>Your address</p>
+
+            <p>
+                @ 2026-2027 (URK24CS1144) - Web Technology Lab Batch 3.
+                All Rights Reserved.
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
