@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 35px 15px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2, #6dd5ed);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px auto;
+            padding: 35px 40px;
+            background: #fff;
+            border-radius: 22px;
+            box-shadow: 0 18px 50px rgba(25, 20, 70, 0.25);
+            animation: appear 0.6s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #5142a6;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #777;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        form>label,
+        .field-label {
+            display: block;
+            color: #333;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 9px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d7d9e8;
+            border-radius: 10px;
+            background: #f8f9ff;
+            font-size: 15px;
+            outline: none;
+            transition: 0.25s;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #6955d9;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(105, 85, 217, 0.14);
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px 20px;
+            padding: 5px 0 8px;
+        }
+
+        .options label {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .options input {
+            accent-color: #6955d9;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 18px;
+            border: none;
+            border-radius: 11px;
+            background: linear-gradient(135deg, #6955d9, #8e44ad);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(105, 85, 217, 0.3);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>✨ User Registration</h2>
+        <p class="subtitle">Fill in your details to register</p>
+
+        <form action="/server" method="post">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" min="1" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10}"
+                maxlength="10" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <span class="field-label">Gender</span>
+            <div class="options">
+                <label>
+                    <input type="radio" name="gender" value="Male" required> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Female"> Female
+                </label>
+            </div>
+
+            <label for="state">State</label>
+            <select id="state" name="state" required>
+                <option value="">Select your state</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Karnataka">Karnataka</option>
+            </select>
+
+            <span class="field-label">Skills</span>
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="skills" value="Java Script"> JavaScript
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="Python"> Python
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="C++"> C++
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="Java"> Java
+                </label>
+            </div>
+
+            <button type="submit">Submit Registration →</button>
+        </form>
+    </div>
+</body>
+
+</html>
